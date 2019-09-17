@@ -1,0 +1,8 @@
+"0",""
+"0"," knitr::opts_chunk$set(echo = FALSE, message = FALSE,warning = FALSE)"
+"0",""
+"0"," m <- leaflet(points2017) %>%"
+"0","   addTiles() %>%"
+"0","   setView(lng = nantesLong, lat = nantesLat, zoom = 12)  %>%"
+"0","   addMarkers(lng = ~longitudes, lat = ~latitudes)"
+"0"," m"

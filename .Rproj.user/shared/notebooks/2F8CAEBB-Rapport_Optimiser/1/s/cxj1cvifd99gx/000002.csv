@@ -1,0 +1,102 @@
+"0","DT::renderDataTable(ville,"
+"0","                    options = list(searching = TRUE, ordering = FALSE, paging= TRUE),"
+"0","                    escape = FALSE,"
+"0","                    rownames = FALSE,"
+"0","                    colnames = c(""Communes"",""D\u00e9partements"",""R\u00e9gions"", ""Nombre de logements sociaux""))"
+"1","function (...) 
+"
+"1","{
+"
+"1","    if (length(outputArgs) != 0 && !hasExecuted$get()) {
+"
+"1","        warning(""Unused argument: outputArgs. The argument outputArgs is only "", 
+"
+"1","            ""meant to be used when embedding snippets of Shiny code in an "", 
+"
+"1","            ""R Markdown code chunk (using runtime: shiny). When running a "", 
+"
+"1","            ""full Shiny app, please set the output arguments directly in "", 
+"
+"1","            ""the corresponding output function of your UI code."")
+"
+"1","        hasExecuted$set(TRUE)
+"
+"1","    }
+"
+"1","    if (is.null(formals(origRenderFunc))) 
+"
+"1","        origRenderFunc()
+"
+"1","    else origRenderFunc(...)
+"
+"1","}
+"
+"1","<bytecode: 0x00000000188d0978>
+"
+"1","<environment: 0x0000000020540358>
+"
+"1","attr(,""class"")"
+"1","
+"
+"1","[1]"
+"1"," ""shiny.render.function"""
+"1"," ""function""             "
+"1","
+"
+"1","attr(,""outputFunc"")"
+"1","
+"
+"1","function (outputId, width = ""100%"", height = ""auto"") 
+"
+"1","{
+"
+"1","    htmltools::attachDependencies(htmlwidgets::shinyWidgetOutput(outputId, 
+"
+"1","        ""datatables"", width, height, package = ""DT""), 
+"
+"1","        crosstalk::crosstalkLibs(), append = TRUE)
+"
+"1","}
+"
+"1","<bytecode: 0x0000000015bca7e8>
+"
+"1","<environment: namespace:DT>
+"
+"1","attr(,""outputArgs"")"
+"1","
+"
+"1","list()
+"
+"1","attr(,""hasExecuted"")"
+"1","
+"
+"1","<Mutable>
+  Public:
+    clone: function (deep = FALSE) 
+    get: function () 
+    set: function (value) 
+  Private:
+    value: FALSE"
+"1","
+"
+"1","attr(,""outputAttrs"")"
+"1","
+"
+"1","attr(,""outputAttrs"")$`snapshotPreprocess`
+"
+"1","function (value) 
+"
+"1","{
+"
+"1","    gsub(""\""ajax\""\\s*:\\s*\\{\\s*\""url\""\\s*:\\s*\""[^\""]*\""\\s*,?"", 
+"
+"1","        ""\""ajax\"":{"", value)
+"
+"1","}
+"
+"1","<bytecode: 0x0000000019949b60>
+"
+"1","<environment: 0x000000001a2a7098>
+"
+"1","
+"

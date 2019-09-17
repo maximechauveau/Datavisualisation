@@ -1,0 +1,12 @@
+name: Datavisualisation
+title: Datavisualisation
+username:
+account: maximechauveau
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1200576
+bundleId: 2421206
+url: https://maximechauveau.shinyapps.io/Datavisualisation/
+when: 1568740761.7054
+asMultiple: FALSE
+asStatic: FALSE

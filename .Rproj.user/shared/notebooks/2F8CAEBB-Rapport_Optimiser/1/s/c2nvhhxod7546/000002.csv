@@ -1,0 +1,4 @@
+"0","## Chargement de la table de données clean"
+"0","setwd(""C:/Users/mchauveau/Documents/Master MEDAS/Datavisualisation/Test_RMD/Test_rmd"")"
+"2","The working directory was changed to C:/Users/mchauveau/Documents/Master MEDAS/Datavisualisation/Test_RMD/Test_rmd inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks."
+"0","load(file=""./data/AllData.RData"")"

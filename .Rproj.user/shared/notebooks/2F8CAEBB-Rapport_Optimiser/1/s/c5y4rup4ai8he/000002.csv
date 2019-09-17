@@ -1,0 +1,8 @@
+"0",""
+"0","#Barre de sélection"
+"0","inputPanel(selectInput(""reg"","
+"0","                       ""R\u00e9gions"","
+"0","                       choices = unique(ville$LIBREG),"
+"0","                       selected = ""Auvergne-Rh"""
+"0","                       )"
+"0","           )"

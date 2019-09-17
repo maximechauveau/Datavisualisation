@@ -1,0 +1,7 @@
+"0",""
+"0","region=ville[,sum(N),by=LIBREG]"
+"0","plot_ly(x=region$LIBREG,y=region$V1,type=""bar"","
+"0","        name=""logements sociaux"") %>%"
+"0","  layout(yaxis=list(title=""Nombre de logements sociaux""),"
+"0","         title=""Diagramme à barres représentant les régions françaises\nen fonction du nombre de logements sociaux"")  %>%"
+"0","  add_trace(y=mean(region$V1),mode=""lines"",type=""scatter"",name=""moyenne nationale"")"

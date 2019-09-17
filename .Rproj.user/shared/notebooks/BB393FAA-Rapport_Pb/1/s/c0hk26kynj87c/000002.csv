@@ -1,0 +1,5 @@
+"0","## Chargement de la table de données clean"
+"0","setwd(""C:/Users/mchauveau/Documents/Master MEDAS/Datavisualisation/Test_RMD/Test_rmd/script"")"
+"0","load(file=""ville.Rdata"")"
+"0","load(""dataGPS.RData"")"
+"0","dataPDLL2016 <- read.csv2(""rpls2016_detail_pays_de_la_loire.csv"", encoding = ""latin1"")"

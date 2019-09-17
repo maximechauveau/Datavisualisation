@@ -1,0 +1,240 @@
+"0",""
+"0","#Graph Nb logement / département"
+"0","renderPlotly({"
+"0","  regSelect=ville[LIBREG %in% input$reg,]"
+"0","  resumeRegion=regSelect[,sum(N),by=LIBDEP]"
+"0","    plot_ly(x=resumeRegion$LIBDEP,"
+"0","            y=resumeRegion$V1,"
+"0","            type=""bar"","
+"0","            name=""logements sociaux"","
+"0","            marker = list(color = 'rgb(124, 180, 211)',"
+"0","                          line = list(color = 'rgb(8,48,107)',"
+"0","                                      width = 3"
+"0","                                      )"
+"0","                          ),"
+"0","            ) %>%"
+"0","      layout(yaxis=list(title=""Nombre de logements sociaux"")) %>%"
+"0","      add_trace(y=mean(resumeRegion$N),"
+"0","                mode=""lines"","
+"0","                type=""scatter"","
+"0","                name=""moyenne r\u00e9gionale"""
+"0","                )"
+"0","    })"
+"1","function (...) 
+"
+"1","{
+"
+"1","    if (length(outputArgs) != 0 && !hasExecuted$get()) {
+"
+"1","        warning(""Unused argument: outputArgs. The argument outputArgs is only "", 
+"
+"1","            ""meant to be used when embedding snippets of Shiny code in an "", 
+"
+"1","            ""R Markdown code chunk (using runtime: shiny). When running a "", 
+"
+"1","            ""full Shiny app, please set the output arguments directly in "", 
+"
+"1","            ""the corresponding output function of your UI code."")
+"
+"1","        hasExecuted$set(TRUE)
+"
+"1","    }
+"
+"1","    if (is.null(formals(origRenderFunc))) 
+"
+"1","        origRenderFunc()
+"
+"1","    else origRenderFunc(...)
+"
+"1","}
+"
+"1","<bytecode: 0x00000000188d0978>
+"
+"1","<environment: 0x0000000016909e08>
+"
+"1","attr(,""class"")"
+"1","
+"
+"1","[1]"
+"1"," ""shiny.render.function"""
+"1"," ""function""             "
+"1","
+"
+"1","attr(,""outputFunc"")"
+"1","
+"
+"1","function (outputId, width = ""100%"", height = ""400px"", 
+"
+"1","    inline = FALSE) 
+"
+"1","{
+"
+"1","    htmlwidgets::shinyWidgetOutput(outputId = outputId, name = ""plotly"", 
+"
+"1","        width = width, height = height, inline = inline, package = ""plotly"", 
+"
+"1","        reportSize = TRUE)
+"
+"1","}
+"
+"1","<bytecode: 0x0000000016909660>
+"
+"1","<environment: namespace:plotly>
+"
+"1","attr(,""hasExecuted"")"
+"1","
+"
+"1","<Mutable>
+  Public:
+    clone: function (deep = FALSE) 
+    get: function () 
+    set: function (value) 
+  Private:
+    value: FALSE"
+"1","
+"
+"1","attr(,""outputAttrs"")"
+"1","
+"
+"1","attr(,""outputAttrs"")$`snapshotPreprocess`
+"
+"1","function (value) 
+"
+"1","{
+"
+"1","    json <- from_JSON(value)
+"
+"1","    json$x <- json$x[setdiff(names(json$x), c(""visdat"", 
+"
+"1","        ""cur_data"", ""attrs""))]
+"
+"1","    to_JSON(json)
+"
+"1","}
+"
+"1","<bytecode: 0x0000000016188518>
+"
+"1","<environment: 0x0000000016181600>
+"
+"1","
+"
+"0","#Graph Top 10 ville"
+"0","renderPlotly({"
+"0","  regSelect=ville[LIBREG %in% input$reg,]"
+"0","  logville=regSelect[,sum(N),by=LIBCOM]"
+"0","  logville=logville[order(V1,decreasing = FALSE),]"
+"0","  logville=tail(logville,10)"
+"0","  yform = list(categoryorder = ""array"","
+"0","               categoryarray = logville$LIBCOM"
+"0","               )"
+"0","  plot_ly(x=logville$V1,"
+"0","          y=logville$LIBCOM,"
+"0","          type=""bar"","
+"0","          orientation=""h"","
+"0","          name=""logements sociaux"","
+"0","          marker = list(color = 'rgb(128, 170, 174 )',"
+"0","                        line = list(color = 'rgb(8,48,107)',"
+"0","                                    width = 3"
+"0","                                    )"
+"0","                        )"
+"0","          ) %>%"
+"0","    layout(yaxis=yform)"
+"0","  })"
+"1","function (...) 
+"
+"1","{
+"
+"1","    if (length(outputArgs) != 0 && !hasExecuted$get()) {
+"
+"1","        warning(""Unused argument: outputArgs. The argument outputArgs is only "", 
+"
+"1","            ""meant to be used when embedding snippets of Shiny code in an "", 
+"
+"1","            ""R Markdown code chunk (using runtime: shiny). When running a "", 
+"
+"1","            ""full Shiny app, please set the output arguments directly in "", 
+"
+"1","            ""the corresponding output function of your UI code."")
+"
+"1","        hasExecuted$set(TRUE)
+"
+"1","    }
+"
+"1","    if (is.null(formals(origRenderFunc))) 
+"
+"1","        origRenderFunc()
+"
+"1","    else origRenderFunc(...)
+"
+"1","}
+"
+"1","<bytecode: 0x00000000188d0978>
+"
+"1","<environment: 0x000000001677d798>
+"
+"1","attr(,""class"")"
+"1","
+"
+"1","[1]"
+"1"," ""shiny.render.function"""
+"1"," ""function""             "
+"1","
+"
+"1","attr(,""outputFunc"")"
+"1","
+"
+"1","function (outputId, width = ""100%"", height = ""400px"", 
+"
+"1","    inline = FALSE) 
+"
+"1","{
+"
+"1","    htmlwidgets::shinyWidgetOutput(outputId = outputId, name = ""plotly"", 
+"
+"1","        width = width, height = height, inline = inline, package = ""plotly"", 
+"
+"1","        reportSize = TRUE)
+"
+"1","}
+"
+"1","<bytecode: 0x0000000016909660>
+"
+"1","<environment: namespace:plotly>
+"
+"1","attr(,""hasExecuted"")"
+"1","
+"
+"1","<Mutable>
+  Public:
+    clone: function (deep = FALSE) 
+    get: function () 
+    set: function (value) 
+  Private:
+    value: FALSE"
+"1","
+"
+"1","attr(,""outputAttrs"")"
+"1","
+"
+"1","attr(,""outputAttrs"")$`snapshotPreprocess`
+"
+"1","function (value) 
+"
+"1","{
+"
+"1","    json <- from_JSON(value)
+"
+"1","    json$x <- json$x[setdiff(names(json$x), c(""visdat"", 
+"
+"1","        ""cur_data"", ""attrs""))]
+"
+"1","    to_JSON(json)
+"
+"1","}
+"
+"1","<bytecode: 0x0000000016188518>
+"
+"1","<environment: 0x000000001684c588>
+"
+"1","
+"

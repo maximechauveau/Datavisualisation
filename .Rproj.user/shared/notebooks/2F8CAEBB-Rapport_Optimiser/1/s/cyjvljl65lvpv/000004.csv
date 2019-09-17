@@ -1,0 +1,2 @@
+"0"," "
+"0"," evolution <- 100*(nrow(points2018)-nrow(points2016))/nrow(points2016)"

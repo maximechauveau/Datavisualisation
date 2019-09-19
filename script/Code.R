@@ -1,9 +1,9 @@
-setwd("~/DocumentsMac/EricMaster")
+setwd("C:/Users/mchauveau/Datavisualisation")
 library(data.table)
 library(stringr)
 
 ## Mettre le bon chemin avec les fichiers
-path = "/Users/eric/Dropbox/eric/hlm/Region/"
+path = "C:/Users/mchauveau/Datavisualisation/Region/"
 liste_csv = list.files(path)
 
 ## Lecture et sauvegarde dans une liste de chaque .csv du dossier
@@ -27,11 +27,11 @@ final_2018$adresse = paste(NUMVOIE, INDREP, TYPVOIE, NOMVOIE, CODEPOSTAL, LIBCOM
 reg = final_2018[DEP %in% c(75, 13, 69, 31, 06, 44, 34, 67),]
 
 ## Sauvegarde de la table
-save(final_2018, file = "final.Rdata")
+save(final_2018, file = "./data/final.Rdata")
 
 
 
-load(file="final.Rdata")
+load(file="./data/final.Rdata")
 
 #final=final_2018
 
@@ -94,10 +94,10 @@ ville=merge(departement,NB,by=c("LIBCOM","DEP"))
 
 
 ## Sauvegarde de la table de données
-save(ville,file="ville.Rdata")
+save(ville,file="./data/ville.Rdata")
 
 
-densite = fread("villes_france.csv")
+densite = fread("./data/villes_france.csv")
 densite=densite[,c("V4","V2","V15")]
 
 colnames(densite) = c("Ville","CodePostal","Population")
@@ -105,11 +105,11 @@ colnames(densite) = c("Ville","CodePostal","Population")
 
 densite$Ville=tolower(densite$Ville)
 
-save(densite, file = "densite.Rdata")
+save(densite, file = "./data/densite.Rdata")
 
 
 
-load(file="densite.Rdata")
+load(file="./data/densite.Rdata")
 
 densite$Population_municipale_2010=as.numeric(gsub(" ","",densite$Population_municipale_2010))
 densite[order(Population_municipale_2010,decreasing = TRUE),]
